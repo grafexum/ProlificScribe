@@ -1,0 +1,2 @@
+# ProlificScribe
+Notepad replacement.
