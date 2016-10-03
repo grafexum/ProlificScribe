@@ -1,0 +1,18 @@
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.exe
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.pdb
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.xml
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.Form1.resources
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.Resources.resources
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.vbproj.GenerateResource.Cache
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.exe
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.xml
+c:\users\micha\documents\visual studio 2010\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.pdb
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.exe
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.xml
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.pdb
+C:\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.exe
+C:\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.pdb
+C:\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.xml
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.TextEditorForm.resources
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.Resources.resources
+C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.vbproj.GenerateResource.Cache
