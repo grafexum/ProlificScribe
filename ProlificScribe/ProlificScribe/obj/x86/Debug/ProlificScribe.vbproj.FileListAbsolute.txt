@@ -16,3 +16,13 @@ C:\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.xml
 C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.TextEditorForm.resources
 C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.Resources.resources
 C:\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.vbproj.GenerateResource.Cache
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.exe
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.xml
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.pdb
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.exe
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.pdb
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\bin\Debug\ProlificScribe.xml
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.vbprojResolveAssemblyReference.cache
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.TextEditorForm.resources
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.Resources.resources
+\\SOULBOOGIE\Helper\Root\Projects\ProlificScribe\ProlificScribe\obj\x86\Debug\ProlificScribe.vbproj.GenerateResource.Cache

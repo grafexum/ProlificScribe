@@ -23,7 +23,6 @@ Partial Class TextEditorForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TextEditorForm))
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,8 +37,6 @@ Partial Class TextEditorForm
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
-        Me.ToolStripContainer2 = New System.Windows.Forms.ToolStripContainer()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ColorOptions = New System.Windows.Forms.ToolStripButton()
@@ -49,27 +46,22 @@ Partial Class TextEditorForm
         Me.RemTab = New System.Windows.Forms.ToolStripButton()
         Me.PurgeTabs = New System.Windows.Forms.ToolStripButton()
         Me.RetainTab = New System.Windows.Forms.ToolStripButton()
+        Me.BottomToolStripPanel = New System.Windows.Forms.ToolStripPanel()
+        Me.TopToolStripPanel = New System.Windows.Forms.ToolStripPanel()
+        Me.RightToolStripPanel = New System.Windows.Forms.ToolStripPanel()
+        Me.LeftToolStripPanel = New System.Windows.Forms.ToolStripPanel()
+        Me.ContentPanel = New System.Windows.Forms.ToolStripContentPanel()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.MenuStrip1.SuspendLayout()
-        Me.ToolStripContainer2.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(723, 339)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(199, 137)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
-        '
         'MenuStrip1
         '
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.AboutToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(9, 7)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(136, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(935, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -77,108 +69,83 @@ Partial Class TextEditorForm
         '
         Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(37, 20)
+        Me.FileMenu.Size = New System.Drawing.Size(35, 20)
         Me.FileMenu.Text = "File"
         '
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save As"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditMenu
         '
         Me.EditMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.CutToolStripMenuItem, Me.WordCountToolStripMenuItem})
         Me.EditMenu.Name = "EditMenu"
-        Me.EditMenu.Size = New System.Drawing.Size(39, 20)
+        Me.EditMenu.Size = New System.Drawing.Size(37, 20)
         Me.EditMenu.Text = "Edit"
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'WordCountToolStripMenuItem
         '
         Me.WordCountToolStripMenuItem.Name = "WordCountToolStripMenuItem"
-        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.WordCountToolStripMenuItem.Text = "Word Count"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(95, 22)
         Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'ToolStripContainer2
-        '
-        '
-        'ToolStripContainer2.ContentPanel
-        '
-        Me.ToolStripContainer2.ContentPanel.Controls.Add(Me.TabControl1)
-        Me.ToolStripContainer2.ContentPanel.Size = New System.Drawing.Size(910, 439)
-        Me.ToolStripContainer2.Location = New System.Drawing.Point(12, 59)
-        Me.ToolStripContainer2.Name = "ToolStripContainer2"
-        Me.ToolStripContainer2.Size = New System.Drawing.Size(910, 464)
-        Me.ToolStripContainer2.TabIndex = 2
-        Me.ToolStripContainer2.Text = "ToolStripContainer2"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(910, 305)
-        Me.TabControl1.TabIndex = 3
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.ColorOptions, Me.ChangeFont, Me.ToolStripSeparator2, Me.InsertTab, Me.RemTab, Me.PurgeTabs, Me.RetainTab})
-        Me.ToolStrip1.Location = New System.Drawing.Point(12, 31)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(162, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(935, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -246,29 +213,69 @@ Partial Class TextEditorForm
         Me.RetainTab.Size = New System.Drawing.Size(23, 22)
         Me.RetainTab.Text = "RetainTab"
         '
+        'BottomToolStripPanel
+        '
+        Me.BottomToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.BottomToolStripPanel.Name = "BottomToolStripPanel"
+        Me.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
+        Me.BottomToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.BottomToolStripPanel.Size = New System.Drawing.Size(0, 0)
+        '
+        'TopToolStripPanel
+        '
+        Me.TopToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopToolStripPanel.Name = "TopToolStripPanel"
+        Me.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
+        Me.TopToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.TopToolStripPanel.Size = New System.Drawing.Size(0, 0)
+        '
+        'RightToolStripPanel
+        '
+        Me.RightToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.RightToolStripPanel.Name = "RightToolStripPanel"
+        Me.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RightToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.RightToolStripPanel.Size = New System.Drawing.Size(0, 0)
+        '
+        'LeftToolStripPanel
+        '
+        Me.LeftToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LeftToolStripPanel.Name = "LeftToolStripPanel"
+        Me.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
+        Me.LeftToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.LeftToolStripPanel.Size = New System.Drawing.Size(0, 0)
+        '
+        'ContentPanel
+        '
+        Me.ContentPanel.Size = New System.Drawing.Size(935, 439)
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 49)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(935, 352)
+        Me.TabControl1.TabIndex = 4
+        '
         'TextEditorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(935, 401)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.ToolStripContainer2)
-        Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "TextEditorForm"
         Me.Text = "ProlificScribe"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.ToolStripContainer2.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer2.ResumeLayout(False)
-        Me.ToolStripContainer2.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditMenu As System.Windows.Forms.ToolStripMenuItem
@@ -279,13 +286,11 @@ Partial Class TextEditorForm
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FontDialog1 As System.Windows.Forms.FontDialog
-    Friend WithEvents ToolStripContainer2 As System.Windows.Forms.ToolStripContainer
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ColorOptions As System.Windows.Forms.ToolStripButton
     Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeFont As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents InsertTab As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents RemTab As System.Windows.Forms.ToolStripButton
@@ -294,5 +299,10 @@ Partial Class TextEditorForm
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RetainTab As System.Windows.Forms.ToolStripButton
     Friend WithEvents WordCountToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
+    Friend WithEvents BottomToolStripPanel As ToolStripPanel
+    Friend WithEvents TopToolStripPanel As ToolStripPanel
+    Friend WithEvents RightToolStripPanel As ToolStripPanel
+    Friend WithEvents LeftToolStripPanel As ToolStripPanel
+    Friend WithEvents ContentPanel As ToolStripContentPanel
+    Friend WithEvents TabControl1 As TabControl
 End Class

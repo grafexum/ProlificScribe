@@ -92,37 +92,55 @@ Public Class TextEditorForm
 
     Private Sub SaveAs_Click(sender As System.Object, e As System.EventArgs) Handles SaveAsToolStripMenuItem.Click
 
-        Dim mo_SaveTxtFileDialog As New SaveFileDialog()
-        mo_SaveTxtFileDialog.Filter = "Txt File|*.txt|Rtf File|*.rtf|VB File|*.vb|c# File|*.cs"
-        mo_SaveTxtFileDialog.DefaultExt = "txt"
-        mo_SaveTxtFileDialog.ShowDialog()
+        Try
 
-        Dim result As System.Nullable(Of Boolean) = mo_SaveTxtFileDialog.ShowDialog()
-        If result = True Then
-            If mo_SaveTxtFileDialog.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+            Dim mo_SaveTxtFileDialog As New SaveFileDialog()
+            mo_SaveTxtFileDialog.Filter = "Txt File|*.txt|Rtf File|*.rtf|VB File|*.vb|c# File|*.cs"
+            mo_SaveTxtFileDialog.DefaultExt = "txt"
+            'mo_SaveTxtFileDialog.ShowDialog()
+
+            Dim result As System.Nullable(Of Boolean) = mo_SaveTxtFileDialog.ShowDialog()
+            If result = True Then
+
+                Dim fileStream As System.IO.Stream = mo_SaveTxtFileDialog.OpenFile()
+                Dim sw As New System.IO.StreamWriter(fileStream)
+                sw.WriteLine(GetCurrentDocument().Text)
+                sw.Flush()
+                sw.Close()
+            End If
+
+            If result = False Then
                 Return
             End If
-            Dim fileStream As System.IO.Stream = mo_SaveTxtFileDialog.OpenFile()
-            Dim sw As New System.IO.StreamWriter(fileStream)
-            sw.WriteLine(GetCurrentDocument().Text)
-            sw.Flush()
-            sw.Close()
-        End If
+
+        Catch ex As Exception
+
+            MessageBox.Show("There was a problem saving the file.")
+
+        End Try
 
     End Sub
 
     Private Sub OpenSesame_Click(sender As System.Object, e As System.EventArgs) Handles OpenToolStripMenuItem.Click
 
-        Dim mo_OpenTxtFileDialog As New OpenFileDialog()
-        mo_OpenTxtFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-        mo_OpenTxtFileDialog.Filter = "Txt File|*.txt|Rtf File|*.rtf|VB File|*.vb|c# File|*.cs"
+        Try
 
-        If mo_OpenTxtFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            If mo_OpenTxtFileDialog.FileName.Length > 0 Then
-                GetCurrentDocument().LoadFile(mo_OpenTxtFileDialog.FileName, RichTextBoxStreamType.PlainText)
+
+            Dim mo_OpenTxtFileDialog As New OpenFileDialog()
+            mo_OpenTxtFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            mo_OpenTxtFileDialog.Filter = "Txt File|*.txt|Rtf File|*.rtf|VB File|*.vb|c# File|*.cs"
+
+            If mo_OpenTxtFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                If mo_OpenTxtFileDialog.FileName.Length > 0 Then
+                    GetCurrentDocument().LoadFile(mo_OpenTxtFileDialog.FileName, RichTextBoxStreamType.PlainText)
+                End If
             End If
-        End If
 
+        Catch ex As Exception
+
+            MessageBox.Show("There was a problem opening the file.")
+
+        End Try
     End Sub
 #End Region
 
@@ -133,7 +151,7 @@ Public Class TextEditorForm
     End Sub
 
     Private Sub HelpToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles HelpToolStripMenuItem.Click
-        MessageBox.Show("ProlificScribe v1.0" & vbCrLf & "A redefinition of generic text manipulation.")
+        MessageBox.Show("ProlificScribe v1.1" & vbCrLf & "A redefinition of generic text manipulation.")
     End Sub
 
 #End Region
@@ -211,5 +229,5 @@ Public Class TextEditorForm
     'End Function
 
 #End Region
-    
+
 End Class
